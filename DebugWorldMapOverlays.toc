@@ -1,0 +1,6 @@
+## Title: DebugWorldMapOverlays
+## Interface: 70300
+## Notes: DebugWorldMapOverlays
+## Author: Xylaa-Blacrock (EU)
+
+Core.lua
