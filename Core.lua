@@ -1,6 +1,10 @@
+local debug = false
+
 local old_print = print
 local function print(...)
-	--old_print(...)
+	if debug then 
+		old_print(...)
+	end
 end
 
 
