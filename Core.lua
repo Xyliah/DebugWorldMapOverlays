@@ -29,7 +29,7 @@ frame:SetScript("OnEvent", function(self, event, ...)
 	print(mapName and mapName or "no map")
 	print("#usedOverlays: " .. #usedOverlays)
 
-	-- clear used overlays
+	-- clear used overlays and put them into overlayCache
 	local c = 0
 
 	for i=1,#usedOverlays do
@@ -80,7 +80,9 @@ frame:SetScript("OnEvent", function(self, event, ...)
 		--old_print(i .. mmsubZone)
 	end
 
+	-- only update colored subzones if zones were changed
 	if mapName ~= lastMap then
+		-- loop through all overlays on the current map and set a color to all of them
 		for i=1,100 do 
 			if _G["WorldMapOverlay"..i] then
 				local red, green, blue = random(0, 255), random(0, 255), random(0, 255)
